@@ -4,7 +4,7 @@ This repository contains code for my personal portfolio website, showcasing my p
 
 ## Website Link
 
-You can view the live portfolio website at [www.thetrickuser.in](www.thetrickuser.in).
+You can view the live portfolio website by clicking [here](https://www.thetrickuser.in/).
 
 ## Tech Stack
 

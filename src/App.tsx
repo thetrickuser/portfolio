@@ -1,5 +1,20 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, User, Briefcase, MessageSquare, Rss, X, Menu, Settings, Monitor, Megaphone } from 'lucide-react';
+import { useState, type SetStateAction} from 'react';
+import {
+    Mail,
+    Phone,
+    MapPin,
+    Linkedin,
+    Github,
+    User,
+    Briefcase,
+    MessageSquare,
+    Rss,
+    X,
+    Menu,
+    Settings,
+    Monitor,
+    Megaphone
+} from 'lucide-react';
 
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -11,7 +26,7 @@ const App = () => {
     };
 
     // Close sidebar when a navigation item is clicked
-    const handleNavClick = (sectionId) => {
+    const handleNavClick = (sectionId: SetStateAction<string>) => {
         setActiveSection(sectionId);
         setIsSidebarOpen(false); // Close sidebar after clicking
     };
@@ -368,7 +383,7 @@ const App = () => {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    rows="5"
+                                    rows={4}
                                     className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
                                     placeholder="Your message here..."
                                 ></textarea>
