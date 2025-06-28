@@ -11,9 +11,13 @@ type MainAreaProps = {
 
 export const MainArea = ({ onClick, activeSection }: MainAreaProps) => {
     return <main
-        className="flex-1 bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl shadow-xl relative mt-[60px] md:mt-0">
+        className="flex-1 bg-white dark:bg-gray-800 p-6 xl:p-8 rounded-2xl shadow-xl relative mt-[60px] xl:mt-0">
         {/* Navigation Tabs (visible on larger screens and when sidebar is closed on mobile) */}
-        <Navbar onClick={onClick} activeSection={activeSection}/>
+        <Navbar
+            onClick={onClick}
+            activeSection={activeSection}
+            style={"hidden xl:block absolute top-0 right-0"}
+        />
 
         {/* Content Sections */}
         <section id="about" className={`${activeSection === "about" ? "block" : "hidden"} py-8`}>
@@ -139,5 +143,11 @@ export const MainArea = ({ onClick, activeSection }: MainAreaProps) => {
                 </button>
             </form>
         </section>
+
+        <Navbar
+            onClick={onClick}
+            activeSection={activeSection}
+            style="block xl:hidden fixed bottom-0 left-0 w-full z-100 bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+        />
     </main>;
 }

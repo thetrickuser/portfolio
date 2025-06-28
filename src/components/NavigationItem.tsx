@@ -11,7 +11,9 @@ export const NavigationItem = ({onClick, activeSection, title, icon, section}: N
     return <li className="mr-2">
         <button
             onClick={() => onClick(section)}
-            className={`flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`flex items-center px-2 py-1 text-xs rounded-full font-medium transition-all duration-200
+            md:text-sm xl:text-lg
+        ${
                 activeSection === section
                     ? "bg-blue-600 text-white shadow-md"
                     : "text-gray-600 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-600"
