@@ -13,8 +13,10 @@ import {
     Menu,
     Settings,
     Monitor,
-    Megaphone
+    // Megaphone
 } from 'lucide-react';
+
+import dp from './assets/face.jpg'
 
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -57,13 +59,13 @@ const App = () => {
                     {/* Profile Section */}
                     <div className="text-center mb-8">
                         <img
-                            src="https://placehold.co/120x120/A0B2C4/FFFFFF?text=JP"
+                            src={dp}
                             alt="Profile Picture"
-                            className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md"
+                            className="w-32 h-32 rounded-full mx-auto mb-4 shadow-md"
                         />
-                        <h1 className="text-2xl font-bold mb-2">John P. Doe</h1>
+                        <h1 className="text-2xl font-bold mb-2">Adhyan</h1>
                         <p className="text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900 py-1 px-4 rounded-full inline-block text-sm font-medium">
-                            Web Developer
+                            Full Stack Developer
                         </p>
                     </div>
 
@@ -72,15 +74,15 @@ const App = () => {
                         <ul className="space-y-3">
                             <li className="flex items-center text-gray-700 dark:text-gray-300">
                                 <Mail size={20} className="text-blue-500 mr-3" />
-                                <span>john.doe@example.com</span>
+                                <span>adhyan@thetrickuser.in</span>
                             </li>
                             <li className="flex items-center text-gray-700 dark:text-gray-300">
                                 <Phone size={20} className="text-blue-500 mr-3" />
-                                <span>+123 456 7890</span>
+                                <span>+91 99346 24534</span>
                             </li>
                             <li className="flex items-center text-gray-700 dark:text-gray-300">
                                 <MapPin size={20} className="text-blue-500 mr-3" />
-                                <span>New York, USA</span>
+                                <span>Kolkata, West Bengal, India</span>
                             </li>
                         </ul>
                     </div>
@@ -88,7 +90,7 @@ const App = () => {
                     {/* Social Links */}
                     <div className="flex justify-center space-x-6">
                         <a
-                            href="https://linkedin.com/in/yourprofile"
+                            href="https://linkedin.com/in/adhyan1011"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-200"
@@ -97,7 +99,7 @@ const App = () => {
                             <Linkedin size={28} />
                         </a>
                         <a
-                            href="https://github.com/yourprofile"
+                            href="https://github.com/thetrickuser"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-200"
@@ -181,7 +183,7 @@ const App = () => {
                     <section id="about" className={`${activeSection === 'about' ? 'block' : 'hidden'} py-8`}>
                         <h2 className="text-3xl font-bold mb-6 border-b-4 border-blue-500 pb-2 inline-block">About Me</h2>
                         <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">
-                            Hello! I'm John P. Doe, a passionate and creative web developer with 5+ years of experience in building beautiful and functional web applications. I specialize in front-end development using modern technologies like React, JavaScript, and Tailwind CSS, focusing on delivering intuitive user experiences and robust solutions.
+                            Hello! I'm Adhyan, a passionate and creative full stack developer with 4+ years of experience in building beautiful and functional web applications. I specialize in back-end development using modern technologies like Spring Boot, React, Java and AWS, focusing on delivering intuitive user experiences and robust solutions.
                         </p>
                         <p className="leading-relaxed text-gray-700 dark:text-gray-300">
                             My journey into web development began with a fascination for how interactive digital experiences are crafted. Since then, I've dedicated myself to mastering the tools and techniques that bring ideas to life on the web. I'm always eager to learn new technologies and contribute to challenging projects.
@@ -200,25 +202,25 @@ const App = () => {
                                 </div>
                             </div>
                             {/* Service Item 2 */}
-                            <div className="flex items-start bg-blue-50 dark:bg-gray-700 p-5 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                                <Settings size={48} className="text-blue-600 mr-4 flex-shrink-0" />
-                                <div>
-                                    <h4 className="text-xl font-semibold mb-2">UI/UX Design</h4>
-                                    <p className="text-gray-600 dark:text-gray-300">
-                                        Designing intuitive and engaging user interfaces that provide seamless user experiences.
-                                    </p>
-                                </div>
-                            </div>
+                            {/*<div className="flex items-start bg-blue-50 dark:bg-gray-700 p-5 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">*/}
+                            {/*    <Settings size={48} className="text-blue-600 mr-4 flex-shrink-0" />*/}
+                            {/*    <div>*/}
+                            {/*        <h4 className="text-xl font-semibold mb-2">UI/UX Design</h4>*/}
+                            {/*        <p className="text-gray-600 dark:text-gray-300">*/}
+                            {/*            Designing intuitive and engaging user interfaces that provide seamless user experiences.*/}
+                            {/*        </p>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                             {/* Service Item 3 */}
-                            <div className="flex items-start bg-blue-50 dark:bg-gray-700 p-5 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                                <Megaphone size={48} className="text-blue-600 mr-4 flex-shrink-0" />
-                                <div>
-                                    <h4 className="text-xl font-semibold mb-2">Digital Marketing</h4>
-                                    <p className="text-gray-600 dark:text-gray-300">
-                                        Strategies to enhance online visibility and drive organic traffic to your digital presence.
-                                    </p>
-                                </div>
-                            </div>
+                            {/*<div className="flex items-start bg-blue-50 dark:bg-gray-700 p-5 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">*/}
+                            {/*    <Megaphone size={48} className="text-blue-600 mr-4 flex-shrink-0" />*/}
+                            {/*    <div>*/}
+                            {/*        <h4 className="text-xl font-semibold mb-2">Digital Marketing</h4>*/}
+                            {/*        <p className="text-gray-600 dark:text-gray-300">*/}
+                            {/*            Strategies to enhance online visibility and drive organic traffic to your digital presence.*/}
+                            {/*        </p>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                             {/* Service Item 4 */}
                             <div className="flex items-start bg-blue-50 dark:bg-gray-700 p-5 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
                                 <Briefcase size={48} className="text-blue-600 mr-4 flex-shrink-0" />
@@ -238,32 +240,20 @@ const App = () => {
                             {/* Experience Section */}
                             <h3 className="text-2xl font-bold mb-4 border-b-2 border-blue-400 pb-2 inline-block">Experience</h3>
                             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                                <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Senior Web Developer</h4>
-                                <p className="text-gray-700 dark:text-gray-300 mb-2">Tech Solutions Inc. / 2022 - Present</p>
+                                <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Senior Developer</h4>
+                                <p className="text-gray-700 dark:text-gray-300 mb-2">Cognizant / 2021 - Present</p>
                                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                                     <li>Led the development of scalable web applications using React and Node.js.</li>
                                     <li>Implemented responsive design principles, ensuring cross-browser compatibility.</li>
                                     <li>Collaborated with design and product teams to deliver user-centric features.</li>
                                 </ul>
                             </div>
-                            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                                <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Junior Front-End Developer</h4>
-                                <p className="text-gray-700 dark:text-gray-300 mb-2">Web Innovators / 2020 - 2022</p>
-                                <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-                                    <li>Developed and maintained client-side features for various web projects.</li>
-                                    <li>Assisted in optimizing website performance and accessibility.</li>
-                                    <li>Participated in code reviews and contributed to team knowledge sharing.</li>
-                                </ul>
-                            </div>
 
                             {/* Education Section */}
                             <h3 className="text-2xl font-bold mt-10 mb-4 border-b-2 border-blue-400 pb-2 inline-block">Education</h3>
                             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md">
-                                <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Bachelor of Science in Computer Science</h4>
-                                <p className="text-gray-700 dark:text-gray-300 mb-2">University of Technology / 2016 - 2020</p>
-                                <p className="text-gray-600 dark:text-gray-300">
-                                    Graduated with honors, focusing on web technologies, data structures, and algorithms.
-                                </p>
+                                <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Bachelor of Technology (B. Tech) in Computer Science</h4>
+                                <p className="text-gray-700 dark:text-gray-300 mb-2">IIIT Kottayam / 2017 - 2021</p>
                             </div>
                         </div>
                     </section>
@@ -271,48 +261,49 @@ const App = () => {
                     <section id="portfolio" className={`${activeSection === 'portfolio' ? 'block' : 'hidden'} py-8`}>
                         <h2 className="text-3xl font-bold mb-6 border-b-4 border-blue-500 pb-2 inline-block">My Portfolio</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* Portfolio Item 1 */}
-                            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img
-                                    src="https://placehold.co/400x250/C0C0C0/FFFFFF?text=Project+1"
-                                    alt="Project 1"
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="p-4">
-                                    <h4 className="text-xl font-semibold mb-2">E-commerce Platform</h4>
-                                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                        A responsive e-commerce site with product listings, cart functionality, and secure checkout.
-                                    </p>
-                                </div>
-                            </div>
-                            {/* Portfolio Item 2 */}
-                            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img
-                                    src="https://placehold.co/400x250/C0C0C0/FFFFFF?text=Project+2"
-                                    alt="Project 2"
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="p-4">
-                                    <h4 className="text-xl font-semibold mb-2">Task Management App</h4>
-                                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                        A single-page application for managing tasks, with drag-and-drop features.
-                                    </p>
-                                </div>
-                            </div>
-                            {/* Portfolio Item 3 */}
-                            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img
-                                    src="https://placehold.co/400x250/C0C0C0/FFFFFF?text=Project+3"
-                                    alt="Project 3"
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="p-4">
-                                    <h4 className="text-xl font-semibold mb-2">Recipe Sharing Platform</h4>
-                                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                        A community-driven platform for users to share and discover recipes.
-                                    </p>
-                                </div>
-                            </div>
+                        {/*    /!* Portfolio Item 1 *!/*/}
+                        {/*    <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">*/}
+                        {/*        <img*/}
+                        {/*            src="https://placehold.co/400x250/C0C0C0/FFFFFF?text=Project+1"*/}
+                        {/*            alt="Project 1"*/}
+                        {/*            className="w-full h-48 object-cover"*/}
+                        {/*        />*/}
+                        {/*        <div className="p-4">*/}
+                        {/*            <h4 className="text-xl font-semibold mb-2">Movies-Magic</h4>*/}
+                        {/*            <p className="text-gray-600 dark:text-gray-300 text-sm">*/}
+                        {/*                A responsive e-commerce site with product listings, cart functionality, and secure checkout.*/}
+                        {/*            </p>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    /!* Portfolio Item 2 *!/*/}
+                        {/*    <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">*/}
+                        {/*        <img*/}
+                        {/*            src="https://placehold.co/400x250/C0C0C0/FFFFFF?text=Project+2"*/}
+                        {/*            alt="Project 2"*/}
+                        {/*            className="w-full h-48 object-cover"*/}
+                        {/*        />*/}
+                        {/*        <div className="p-4">*/}
+                        {/*            <h4 className="text-xl font-semibold mb-2">Task Management App</h4>*/}
+                        {/*            <p className="text-gray-600 dark:text-gray-300 text-sm">*/}
+                        {/*                A single-page application for managing tasks, with drag-and-drop features.*/}
+                        {/*            </p>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    /!* Portfolio Item 3 *!/*/}
+                        {/*    <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">*/}
+                        {/*        <img*/}
+                        {/*            src="https://placehold.co/400x250/C0C0C0/FFFFFF?text=Project+3"*/}
+                        {/*            alt="Project 3"*/}
+                        {/*            className="w-full h-48 object-cover"*/}
+                        {/*        />*/}
+                        {/*        <div className="p-4">*/}
+                        {/*            <h4 className="text-xl font-semibold mb-2">Recipe Sharing Platform</h4>*/}
+                        {/*            <p className="text-gray-600 dark:text-gray-300 text-sm">*/}
+                        {/*                A community-driven platform for users to share and discover recipes.*/}
+                        {/*            </p>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        <span>Coming Soon</span>
                         </div>
                     </section>
 
@@ -320,35 +311,36 @@ const App = () => {
                         <h2 className="text-3xl font-bold mb-6 border-b-4 border-blue-500 pb-2 inline-block">My Blog</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Blog Post 1 */}
-                            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img
-                                    src="https://placehold.co/400x200/C0C0C0/FFFFFF?text=Blog+1"
-                                    alt="Blog Post 1"
-                                    className="w-full h-40 object-cover"
-                                />
-                                <div className="p-4">
-                                    <h4 className="text-xl font-semibold mb-2">Mastering React Hooks</h4>
-                                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                        A deep dive into common React Hooks and how they can simplify your component logic.
-                                    </p>
-                                    <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Read More</a>
-                                </div>
-                            </div>
-                            {/* Blog Post 2 */}
-                            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img
-                                    src="https://placehold.co/400x200/C0C0C0/FFFFFF?text=Blog+2"
-                                    alt="Blog Post 2"
-                                    className="w-full h-40 object-cover"
-                                />
-                                <div className="p-4">
-                                    <h4 className="text-xl font-semibold mb-2">Responsive Design with Tailwind CSS</h4>
-                                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                        Tips and tricks for building perfectly responsive layouts using Tailwind's utility-first approach.
-                                    </p>
-                                    <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Read More</a>
-                                </div>
-                            </div>
+                            {/*<div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">*/}
+                            {/*    <img*/}
+                            {/*        src="https://placehold.co/400x200/C0C0C0/FFFFFF?text=Blog+1"*/}
+                            {/*        alt="Blog Post 1"*/}
+                            {/*        className="w-full h-40 object-cover"*/}
+                            {/*    />*/}
+                            {/*    <div className="p-4">*/}
+                            {/*        <h4 className="text-xl font-semibold mb-2">Mastering React Hooks</h4>*/}
+                            {/*        <p className="text-gray-600 dark:text-gray-300 text-sm">*/}
+                            {/*            A deep dive into common React Hooks and how they can simplify your component logic.*/}
+                            {/*        </p>*/}
+                            {/*        <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Read More</a>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
+                            {/*/!* Blog Post 2 *!/*/}
+                            {/*<div className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">*/}
+                            {/*    <img*/}
+                            {/*        src="https://placehold.co/400x200/C0C0C0/FFFFFF?text=Blog+2"*/}
+                            {/*        alt="Blog Post 2"*/}
+                            {/*        className="w-full h-40 object-cover"*/}
+                            {/*    />*/}
+                            {/*    <div className="p-4">*/}
+                            {/*        <h4 className="text-xl font-semibold mb-2">Responsive Design with Tailwind CSS</h4>*/}
+                            {/*        <p className="text-gray-600 dark:text-gray-300 text-sm">*/}
+                            {/*            Tips and tricks for building perfectly responsive layouts using Tailwind's utility-first approach.*/}
+                            {/*        </p>*/}
+                            {/*        <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Read More</a>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
+                            <span>Coming Soon</span>
                         </div>
                     </section>
 
@@ -365,7 +357,7 @@ const App = () => {
                                     id="name"
                                     name="name"
                                     className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
-                                    placeholder="John P. Doe"
+                                    placeholder="Adhyan"
                                 />
                             </div>
                             <div>
@@ -375,7 +367,7 @@ const App = () => {
                                     id="email"
                                     name="email"
                                     className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
-                                    placeholder="john.doe@example.com"
+                                    placeholder="you@example.com"
                                 />
                             </div>
                             <div>
