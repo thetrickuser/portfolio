@@ -1,6 +1,7 @@
 import {useState} from "react";
 import dp from "../assets/face.jpg";
-import {Github, Linkedin, Mail, MapPin, Phone} from "lucide-react";
+import {GrMail} from "react-icons/gr";
+import {FaGithub, FaLinkedin, FaLocationDot, FaPhone} from "react-icons/fa6";
 
 export const Sidebar = () => {
     const [showContact, setShowContact] = useState(false);
@@ -27,15 +28,15 @@ export const Sidebar = () => {
             >
                 <ul className="space-y-3">
                     <li className="flex items-center text-gray-700 dark:text-gray-300">
-                        <Mail size={20} className="text-blue-500 mr-3"/>
+                        <GrMail size={20} className="text-blue-500 mr-3"/>
                         <span>adhyan@thetrickuser.in</span>
                     </li>
                     <li className="flex items-center text-gray-700 dark:text-gray-300">
-                        <Phone size={20} className="text-blue-500 mr-3"/>
+                        <FaPhone size={20} className="text-blue-500 mr-3"/>
                         <span>+91 99346 24534</span>
                     </li>
                     <li className="flex items-center text-gray-700 dark:text-gray-300">
-                        <MapPin size={20} className="text-blue-500 mr-3"/>
+                        <FaLocationDot size={20} className="text-blue-500 mr-3"/>
                         <span>Kolkata, West Bengal, India</span>
                     </li>
                 </ul>
@@ -50,7 +51,7 @@ export const Sidebar = () => {
                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-200"
                     aria-label="LinkedIn Profile"
                 >
-                    <Linkedin size={28}/>
+                    <FaLinkedin size={28}/>
                 </a>
                 <a
                     href="https://github.com/thetrickuser"
@@ -59,7 +60,7 @@ export const Sidebar = () => {
                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-200"
                     aria-label="GitHub Profile"
                 >
-                    <Github size={28}/>
+                    <FaGithub size={28}/>
                 </a>
             </div>
 
