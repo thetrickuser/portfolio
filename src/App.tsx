@@ -13,7 +13,7 @@ const App = () => {
         <div className="font-sans min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
 
             {/* Main Layout Container */}
-            <div className="flex flex-col xl:flex-row min-h-screen p-4 max-w-7xl mx-auto xl:gap-10">
+            <div className="flex flex-col xl:flex-row min-h-screen p-4 mx-auto xl:gap-10">
 
                 {/* Sidebar */}
                 <Sidebar />

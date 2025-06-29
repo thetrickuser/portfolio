@@ -11,7 +11,7 @@ type MainAreaProps = {
 
 export const MainArea = ({ onClick, activeSection }: MainAreaProps) => {
     return <main
-        className="flex-1 bg-white dark:bg-gray-800 p-6 xl:p-8 rounded-2xl shadow-xl relative mt-[60px] xl:mt-0">
+        className="flex-1 bg-white dark:bg-gray-800 p-6 xl:p-8 rounded-2xl shadow-xl relative mt-4 xl:mt-0">
         {/* Navigation Tabs (visible on larger screens and when sidebar is closed on mobile) */}
         <Navbar
             onClick={onClick}
