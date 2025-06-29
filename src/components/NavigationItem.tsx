@@ -19,7 +19,10 @@ export const NavigationItem = ({onClick, activeSection, title, icon, section}: N
                     : "text-gray-600 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-600"
             }`}
         >
-            {icon} {title}
+            <div className={'flex flex-col md:flex-row items-center justify-center gap-0.5'}>
+                {icon}
+                {title}
+            </div>
         </button>
     </li>;
 }
