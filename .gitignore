@@ -3,5 +3,5 @@ dist/
 # Logs
 logs
 npm-debug.log*
-
+dist-config.json
 .idea/
